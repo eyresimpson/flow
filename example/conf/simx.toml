@@ -1,0 +1,41 @@
+# simx 核心配置
+
+# 引擎配置
+[engine]
+# 最大线程数，默认为 100
+max-thread = 100
+# 在启动时运行默认脚本，默认为false
+run-init-script = false
+# 在启动时运行默认流，默认为false
+run-init-flow = true
+# 扫描的流程目录
+flow-path = "flow"
+# 扫描的脚本目录
+script-path = "script"
+# 扫描的插件目录
+ext-path = "ext"
+# 系统日志目录
+log-path = "logs"
+# 系统数据库目录
+db-path = "db"
+# 控制台输出样式，默认为true(部分Linux系统下可能无法显示彩色字符，将其关掉即可)
+console-log-style = true
+# 控制台日志等级
+# debug: 包含每个节点的输入、输入等信息，最详细，仅适用于开发环境
+# info：显示引擎正在进行的步骤和操作
+# warn：仅显示警告信息，包括部分未正常配置的环境等
+# fail：仅显示报错信息
+# none：不显示控制台日志
+shell-log-level = "debug"
+
+[update]
+# 保留版本数量，默认为 3
+stored-version = 3
+# 系统自动更新，默认为false（主动请求更新服务器）
+auto-update = false
+# simx 更新服务器地址，为空会请求默认服务器( https://simx.tineaine.cn/update )
+update-addr = ""
+# simx 更新服务器端口，为空会请求默认服务器（20083）
+update-port = 20083
+# simx 更新通道，默认为 stable
+update-channel = "stable"

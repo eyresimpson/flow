@@ -1,0 +1,48 @@
+{
+  "version": "1",
+  "flow_name": "demo-flow",
+  "update_date": "2024-04-26",
+  "create_date": "2024-04-01",
+  "developer": "Tine aine",
+  "env_req": [
+    {
+      "env_key": "engine",
+      "env_val": "1.0.0"
+    },
+    {
+      "env_key": "java",
+      "env_val": "1.8.0"
+    }
+  ],
+  "nodes": [
+    {
+      "handler": "simx.files.plain.reader",
+      "attr": {
+        "path": "auth/private.key"
+      }
+    },
+    {
+      "handler": "simx.os.shell.println",
+      "attr": {
+        "text": "hello world"
+      }
+    },
+    {
+      "handler": "simx.basic.debug.node",
+      "attr": {}
+    },
+    {
+      "handler": "simx.net.http.request_get",
+      "attr": {
+        "attr": "{\"aaa\":\"bbb\"}"
+      }
+    },
+    {
+      "handler": "simx.files.json.writer",
+      "attr": {
+        "path": "example/simx.txt",
+        "type": "default"
+      }
+    }
+  ]
+}
